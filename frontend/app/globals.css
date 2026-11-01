@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-sc-canvas font-body text-[15px] leading-relaxed text-sc-slate antialiased sm:text-base; }
+  h1, h2, h3, h4 { @apply font-display; }
+  :focus-visible { outline: 3px solid #0073B7; outline-offset: 2px; border-radius: 4px; }
+  form label { @apply text-sm font-medium text-sc-slate; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+}
+
+/* Scoped styles strictly for the Sparsh page */
+body:has([data-sparsh-page]) header {
+  box-shadow: none !important;
+  border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+body:has([data-sparsh-page]) footer {
+  background-color: #051F18 !important;
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Scoped Hero Illustration Styles: Aegis Page */
+.aegis-hero-illustration {
+  width: 100%;
+  height: auto;
+  max-height: 50vh;
+  object-fit: contain;
+}
+
+@media (min-width: 1024px) {
+  .aegis-hero-illustration {
+    width: 520px;
+    max-width: none;
+    height: auto;
+    max-height: min(66vh, 600px);
+    object-fit: contain;
+    transform: translateX(20px);
+  }
+}
+
+@media (min-width: 1400px) {
+  .aegis-hero-illustration {
+    width: 580px;
+    transform: translateX(40px);
+  }
+}
+
+@media (min-width: 1800px) {
+  .aegis-hero-illustration {
+    width: 680px;
+    transform: translateX(100px);
+  }
+}
+
+/* Scoped Hero Illustration Styles: Sparsh Page */
+.sparsh-hero-emblem {
+  width: 100%;
+  height: auto;
+  max-height: 50vh;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+@media (min-width: 1024px) {
+  .sparsh-hero-emblem {
+    width: 511px;
+    height: 511px;
+    max-width: none;
+    max-height: none;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 1400px) {
+  .sparsh-hero-emblem {
+    width: 593px;
+    height: 593px;
+    transform: translateX(15px);
+  }
+}
+
+@media (min-width: 1800px) {
+  .sparsh-hero-emblem {
+    width: 655px;
+    height: 655px;
+    transform: translateX(45px);
+  }
+}

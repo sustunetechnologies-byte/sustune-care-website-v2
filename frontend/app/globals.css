@@ -93,3 +93,233 @@ body:has([data-sparsh-page]) footer {
     transform: translateX(45px);
   }
 }
+
+/* ==========================================================================
+   Mobile-Only Layout Fixes (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Prevent horizontal scrolling on mobile viewports */
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     1) HOME HERO (mobile)
+     -------------------------------------------------------------------------- */
+  /* Hero section container on mobile */
+  section:has(img[alt="Sustune Care emblem"]) {
+    min-height: auto !important;
+    height: auto !important;
+    overflow-x: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    padding-bottom: 24px !important;
+  }
+
+  /* Headline: slightly reduced size (about 10-12% smaller: ~32px/2rem down from 36px) */
+  section:has(img[alt="Sustune Care emblem"]) h1 {
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  /* Hero Content Area: sits in normal flow at the top */
+  section:has(img[alt="Sustune Care emblem"]) > div:has(h1) {
+    order: 1 !important;
+    flex: none !important;
+    width: 100% !important;
+    padding-top: 88px !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Hero Artwork Container: converted to normal flow below content and above stats */
+  section:has(img[alt="Sustune Care emblem"]) > div:has(> img[alt="Sustune Care emblem"]) {
+    order: 2 !important;
+    position: relative !important;
+    inset: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 24px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    z-index: 10 !important;
+  }
+
+  /* Hero Artwork Image: centered at 100% container width with soft edge fade */
+  section:has(img[alt="Sustune Care emblem"]) img[alt="Sustune Care emblem"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    -webkit-mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, #000 60%, transparent 100%) !important;
+    mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, #000 60%, transparent 100%) !important;
+    -webkit-mask-composite: source-over !important;
+    mask-composite: add !important;
+  }
+
+  /* Stats Bar Wrapper in Home Hero: sits below artwork in normal flow */
+  section:has(img[alt="Sustune Care emblem"]) > div:has(dl) {
+    order: 3 !important;
+    margin-top: 0 !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     2) SPARSH PAGE HERO (mobile)
+     -------------------------------------------------------------------------- */
+  [data-sparsh-page] #hero {
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 24px !important;
+    padding-bottom: 36px !important;
+  }
+
+  /* Center the visual wrapper horizontally */
+  [data-sparsh-page] #hero div:has(> .sparsh-hero-emblem),
+  [data-sparsh-page] #hero .pointer-events-none.flex {
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 24px auto !important;
+    padding: 0 !important;
+  }
+
+  /* Emblem: size to 70% container width, keep aspect ratio 1:1, full shape visible */
+  .sparsh-hero-emblem {
+    width: 70% !important;
+    max-width: 70% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     3) SPARSH "A trusted presence back home" SECTION (mobile)
+     -------------------------------------------------------------------------- */
+  #story {
+    scroll-margin-top: 84px !important;
+    padding-top: 32px !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  /* Video card full width of container, centered, maintaining aspect ratio */
+  #story div:has(> figure) {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 9 / 16 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  #story figure {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+  }
+
+  #story figure > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 9 / 16 !important;
+    margin: 0 !important;
+  }
+
+  /* Gold play button kept centered on the video card */
+  #story button[aria-label^="Play video"] {
+    position: absolute !important;
+    inset: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Spacing above the next heading ("A typical visiting day") */
+  #story .grid > div:last-child {
+    margin-top: 36px !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     4) WHATSAPP BUTTON (mobile only)
+     -------------------------------------------------------------------------- */
+  /* Reduced size, fixed at bottom-right with 12px margin, high z-index */
+  a.fixed[href*="wa.me"],
+  body > a[href*="wa.me"] {
+    bottom: 12px !important;
+    right: 12px !important;
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+    gap: 8px !important;
+    z-index: 9999 !important;
+  }
+
+  /* Page/footer wrapper padding-bottom so button never covers footer content */
+  footer {
+    padding-bottom: 80px !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     5) HOME STATS BAR AND NRI REALITY SECTION (mobile)
+     -------------------------------------------------------------------------- */
+  /* Equal heights and aligned content for all four stat cards */
+  dl:has(> div > .min-w-0 > dd) {
+    grid-auto-rows: 1fr !important;
+  }
+
+  dl:has(> div > .min-w-0 > dd) > div {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 16px 12px !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* "3 cities / Hyderabad · Bengaluru · Delhi NCR" stat wrap cleanly */
+  dl:has(> div > .min-w-0 > dd) > div:last-child .min-w-0 {
+    width: 100% !important;
+    flex: 1 1 0% !important;
+  }
+
+  dl:has(> div > .min-w-0 > dd) > div:last-child dt {
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
+    letter-spacing: -0.01em !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* NRI Reality section: ample spacing so nothing sits underneath WhatsApp button */
+  section:has(img[src*="nri-world"]) {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 72px !important;
+  }
+
+  section:has(img[src*="nri-world"]) ul {
+    margin-bottom: 24px !important;
+  }
+
+  section:has(img[src*="nri-world"]) ul > li:last-child {
+    margin-bottom: 8px !important;
+  }
+}
+

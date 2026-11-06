@@ -18,7 +18,7 @@ import { VideoPlayer } from '@/components/ui/VideoPlayer'
 import { AEGIS_VIDEO } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Aegis property stewardship',
+  title: 'Aegis | Institutional Asset Guardianship',
   description: 'Tenant scouting, rental management, maintenance and interiors for Global Indian-owned property in Hyderabad, Bengaluru and Delhi NCR.',
 }
 
@@ -104,19 +104,25 @@ export default function AegisPage() {
 
         <div className="relative z-10 mx-auto max-w-page w-full px-5 sm:px-8">
           <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-            <div>
+            <div className="[container-type:inline-size]">
               {/* Gold-tinted AEGIS badge */}
               <span className="inline-block rounded-md border border-sc-gold/40 bg-sc-gold/15 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.18em] text-sc-gold shadow-sm backdrop-blur-sm">
                 Aegis
               </span>
 
-              {/* Heading: White, responsive tagline */}
-              <h1 className="mt-3 font-display font-bold leading-[1.12] text-white tracking-tight">
-                <span className="tagline-hero">
-                  <span className="tagline-full text-[clamp(1.5rem,2.4vw,2.5rem)]">Institutional Asset Guardianship for Global Indians</span>
-                  <span className="tagline-med text-[clamp(1.7rem,3vw,2.7rem)]">Institutional Asset Guardianship</span>
-                  <span className="tagline-short text-[clamp(1.6rem,5vw,2.2rem)]">Asset Guardianship</span>
+              {/* Product Tagline: 18px, font-medium, tracking-[0.04em], gold, 12px space above headline */}
+              <div className="mt-2.5 mb-3">
+                <span className="tagline-product-hero">
+                  <span className="tagline-full">Institutional Asset Guardianship for Global Indians</span>
+                  <span className="tagline-med">Institutional Asset Guardianship</span>
+                  <span className="tagline-short">Asset Guardianship</span>
                 </span>
+              </div>
+
+              {/* Heading: White, clamp sized matching Sparsh hero */}
+              <h1 className="font-display text-[clamp(2.2rem,3.8vw,3.2rem)] font-bold leading-[1.12] text-white tracking-tight">
+                <span className="block lg:whitespace-nowrap">Institutional Asset Guardianship</span>
+                <span className="block lg:whitespace-nowrap">for Global Indians</span>
               </h1>
 
               {/* Subtext: Light text, increased size */}

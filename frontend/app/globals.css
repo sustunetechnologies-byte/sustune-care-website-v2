@@ -471,3 +471,54 @@ body:has([data-sparsh-page]) footer {
   .tagline-hero .tagline-med { display: none; }
   .tagline-hero .tagline-full { display: inline; }
 }
+
+/* ===================================================================
+   HERO PRODUCT TAGLINE (Aegis & Sparsh Page Heroes)
+   One-line gold tagline below badge and 12px above headline
+   =================================================================== */
+.tagline-product-hero {
+  display: inline-block;
+  white-space: nowrap;
+  color: #D4AF37;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+}
+
+.tagline-product-hero .tagline-full,
+.tagline-product-hero .tagline-med,
+.tagline-product-hero .tagline-short {
+  white-space: nowrap;
+}
+
+/* Default / Desktop & Tablet: Full version visible */
+.tagline-product-hero .tagline-full { display: inline; }
+.tagline-product-hero .tagline-med { display: none; }
+.tagline-product-hero .tagline-short { display: none; }
+
+/* Media query fallbacks */
+@media (max-width: 419px) {
+  .tagline-product-hero .tagline-full { display: none; }
+  .tagline-product-hero .tagline-med { display: inline; }
+  .tagline-product-hero .tagline-short { display: none; }
+}
+
+@media (max-width: 319px) {
+  .tagline-product-hero .tagline-full { display: none; }
+  .tagline-product-hero .tagline-med { display: none; }
+  .tagline-product-hero .tagline-short { display: inline; }
+}
+
+/* Container query rules when container query is supported */
+@container (max-width: 419px) {
+  .tagline-product-hero .tagline-full { display: none !important; }
+  .tagline-product-hero .tagline-med { display: inline !important; }
+  .tagline-product-hero .tagline-short { display: none !important; }
+}
+
+@container (max-width: 319px) {
+  .tagline-product-hero .tagline-full { display: none !important; }
+  .tagline-product-hero .tagline-med { display: none !important; }
+  .tagline-product-hero .tagline-short { display: inline !important; }
+}

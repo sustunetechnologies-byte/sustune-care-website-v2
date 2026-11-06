@@ -41,7 +41,6 @@ export const NAV = [
   { href: '/', label: 'Home' },
   { href: '/aegis', label: 'Aegis' },
   { href: '/sparsh', label: 'Sparsh' },
-  { href: '/portal-preview', label: 'Portal' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ] as const

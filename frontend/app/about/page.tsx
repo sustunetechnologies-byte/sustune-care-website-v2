@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { MessageCircle } from 'lucide-react'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
-import { Founders } from '@/components/about/Founders'
 import { SITE, waLink } from '@/lib/config'
 
 export const metadata: Metadata = {
@@ -70,10 +69,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* 3. "Meet the founders" + 3 founder placeholder cards */}
-      {/* TODO: add leadership names, photos and short bios here when the team approves them. */}
-      <Founders />
 
       {/* 4. "Talk to the team" CTA band */}
       <section className="scroll-mt-24 bg-sc-marine text-white py-[clamp(48px,8vh,88px)]">

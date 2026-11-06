@@ -71,7 +71,7 @@ export function Pillars() {
           Complete Care
         </h2>
         <p className="mt-1 text-slate-600 max-w-2xl mx-auto text-xs sm:text-sm leading-relaxed">
-          Institutional property stewardship and compassionate elder care in India. Choose the service you need or combine both for total cross-border peace of mind.
+          Institutional asset guardianship and extended family care in India. Choose the service you need or combine both for total cross-border peace of mind.
         </p>
       </div>
 

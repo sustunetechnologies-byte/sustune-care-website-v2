@@ -14,7 +14,7 @@ export default function Login() {
     e.preventDefault(); setErr(''); setBusy(true)
     try {
       const r = await api.login(f)
-      router.push(r.user.role === 'admin' ? '/admin' : '/portal')
+      router.push(r.user.role === 'admin' ? '/admin' : '/')
     } catch (x) { setErr(x instanceof Error ? x.message : 'Sign-in failed.') } finally { setBusy(false) }
   }
   return (
@@ -26,7 +26,6 @@ export default function Login() {
           <div><label htmlFor="pw">Password</label><input id="pw" type="password" required autoComplete="current-password" value={f.password} onChange={(e) => setF({ ...f, password: e.target.value })} className="mt-1.5 block w-full rounded-md border border-slate-300 bg-white px-3 py-2.5" /></div>
           {err && <p role="alert" className="font-medium text-red-700">{err}</p>}
           <Button type="submit" disabled={busy} className="w-full">{busy ? 'Signing in…' : 'Sign in'}</Button>
-          <p className="text-sm text-slate-600">Want a look first? <a className="underline" href="/portal-preview">Open the portal demo</a>.</p>
         </form>
       </div>
     </Section>

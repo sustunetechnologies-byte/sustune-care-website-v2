@@ -20,7 +20,12 @@ const nextConfig = {
     return [{ source: '/:path*', headers: securityHeaders }]
   },
   async redirects() {
-    return [{ source: '/portal/demo', destination: '/portal-preview', permanent: true }]
+    return [
+      { source: '/portal-preview', destination: '/', permanent: true },
+      { source: '/portal-preview/:path*', destination: '/', permanent: true },
+      { source: '/portal', destination: '/', permanent: true },
+      { source: '/portal/:path*', destination: '/', permanent: true },
+    ]
   },
 }
 export default nextConfig

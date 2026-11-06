@@ -22,7 +22,7 @@ const BACKDROP = [
 export function Hero() {
   const [video, setVideo] = useState(false)
   return (
-    <section className="relative flex min-h-[100svh] lg:min-h-0 lg:[min-height:auto] flex-col justify-center lg:justify-start overflow-x-hidden text-white border-0 m-0 box-border lg:pt-[120px] lg:pb-[530px]" style={{ background: BACKDROP }}>
+    <section className="relative flex min-h-[100svh] lg:min-h-0 lg:[min-height:auto] flex-col justify-center lg:justify-start overflow-x-hidden text-white border-0 m-0 box-border lg:pt-[185px] lg:pb-[465px]" style={{ background: BACKDROP }}>
       {/* Subtle glow overlay on left to maintain text contrast */}
       <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 z-[5] hidden w-[55%] bg-gradient-to-r from-sc-deep/80 via-sc-deep/30 to-transparent lg:block" />
 

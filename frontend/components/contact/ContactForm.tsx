@@ -9,8 +9,8 @@ import { inr, inrToUsd } from '@/lib/pricing'
 import { cn } from '@/lib/cn'
 
 const INTERESTS = [
-  { id: 'aegis', label: 'Aegis (Property Management)' },
-  { id: 'sparsh', label: 'Sparsh (Elder Care)' },
+  { id: 'aegis', label: 'Aegis (Asset Guardianship)' },
+  { id: 'sparsh', label: 'Sparsh (Extended Family Care)' },
   { id: 'both', label: 'Combined Bundle (Both)' },
 ] as const
 const input = 'mt-1.5 block w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sc-slate placeholder:text-slate-400'

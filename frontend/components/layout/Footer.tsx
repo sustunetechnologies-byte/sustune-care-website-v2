@@ -17,7 +17,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-page gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
         <div>
           <Logo light />
-          <p className="mt-4 max-w-sm text-sm leading-relaxed">Property stewardship and parental care for Global Indians in {HUBS.join(', ')}.</p>
+          <p className="mt-4 max-w-sm text-sm leading-relaxed">Asset guardianship and extended family care for Global Indians in {HUBS.join(', ')}.</p>
           <address className="mt-4 space-y-1 text-sm not-italic">
             <p><a href={`tel:${SITE.phoneTel}`} className="hover:text-white">{SITE.phoneDisplay}</a> (India)</p>
             <p><a href={`tel:${SITE.phoneUsTel}`} className="hover:text-white">{SITE.phoneUsDisplay}</a> (USA)</p>
@@ -26,7 +26,7 @@ export function Footer() {
         </div>
         {col('Aegis property', [['Tenant scouting', '/aegis#modules'], ['Rental management', '/aegis#modules'], ['Maintenance and interiors', '/aegis#modules'], ['Pricing', '/aegis#pricing'], ['Sample inspection report', '/aegis#report']])}
         {col('Sparsh care', [['24/7 emergency SOS', '/sparsh#pillars'], ['Doctor escort', '/sparsh#pillars'], ['Daily errands', '/sparsh#pillars'], ['Companionship', '/sparsh#pillars'], ['Our story & video', '/sparsh#story']])}
-        {col('Company', [['About', '/about'], ['Portal demo', '/portal-preview'], ['Client login', '/login'], ['Contact', '/contact'], ['Privacy policy', '/privacy'], ['Terms', '/terms']])}
+        {col('Company', [['About', '/about'], ['Client login', '/login'], ['Contact', '/contact'], ['Privacy policy', '/privacy'], ['Terms', '/terms']])}
       </div>
       <div className="border-t border-white/10">
         <p className="mx-auto max-w-page px-5 py-5 text-xs sm:px-8">© {new Date().getFullYear()} {SITE.legalName}. All rights reserved. {SITE.tagline}</p>

@@ -69,7 +69,7 @@ export function Testimonials() {
                   Trusted by Global Indians
                 </h2>
                 <p className="mt-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-sm">
-                  Real stories and genuine peace of mind from NRI families across the world.
+                  Real stories and genuine peace of mind from Global Indian families across the world.
                 </p>
 
                 <div className="mt-4 flex flex-wrap items-center gap-3">

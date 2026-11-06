@@ -354,3 +354,120 @@ body:has([data-sparsh-page]) footer {
   }
 }
 
+
+
+/* ==========================================================================
+   HOMEPAGE HERO - Desktop (min-width: 1024px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .hero-artwork-container {
+    -webkit-mask-image: linear-gradient(to bottom, #000 85%, transparent 100%) !important;
+    mask-image: linear-gradient(to bottom, #000 85%, transparent 100%) !important;
+  }
+  .hero-artwork-image {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 35%) !important;
+    mask-image: linear-gradient(to right, transparent 0%, #000 35%) !important;
+  }
+}
+
+/* ==========================================================================
+   GLOBAL INDIAN REALITY - Desktop Wide Layout (min-width: 1024px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  section:has(img[src*="nri-world"]) > div:first-child {
+    max-width: 1820px !important;
+  }
+}
+
+/* ===================================================================
+   RESPONSIVE TAGLINES (Aegis & Sparsh)
+   Container queries with media query fallbacks
+   =================================================================== */
+.tagline-card {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.tagline-card .tagline-full,
+.tagline-card .tagline-med,
+.tagline-card .tagline-short {
+  white-space: nowrap;
+}
+
+/* Default / Mobile < 380px: Short */
+.tagline-card .tagline-full { display: none; }
+.tagline-card .tagline-med { display: none; }
+.tagline-card .tagline-short { display: inline; }
+
+/* Media query fallbacks */
+@media (min-width: 380px) and (max-width: 639px) {
+  .tagline-card .tagline-short { display: none; }
+  .tagline-card .tagline-med { display: inline; }
+  .tagline-card .tagline-full { display: none; }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .tagline-card .tagline-short { display: none; }
+  .tagline-card .tagline-med { display: none; }
+  .tagline-card .tagline-full { display: inline; }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .tagline-card .tagline-short { display: none; }
+  .tagline-card .tagline-med { display: inline; }
+  .tagline-card .tagline-full { display: none; }
+}
+
+@media (min-width: 1280px) {
+  .tagline-card .tagline-short { display: none; }
+  .tagline-card .tagline-med { display: none; }
+  .tagline-card .tagline-full { display: inline; }
+}
+
+/* Container query rules when container query is supported */
+@container (max-width: 340px) {
+  .tagline-card .tagline-full { display: none !important; }
+  .tagline-card .tagline-med { display: none !important; }
+  .tagline-card .tagline-short { display: inline !important; }
+}
+
+@container (min-width: 341px) and (max-width: 580px) {
+  .tagline-card .tagline-full { display: none !important; }
+  .tagline-card .tagline-med { display: inline !important; }
+  .tagline-card .tagline-short { display: none !important; }
+}
+
+@container (min-width: 581px) {
+  .tagline-card .tagline-full { display: inline !important; }
+  .tagline-card .tagline-med { display: none !important; }
+  .tagline-card .tagline-short { display: none !important; }
+}
+
+/* Hero responsive tagline (Aegis page) */
+.tagline-hero {
+  display: block;
+}
+.tagline-hero .tagline-full,
+.tagline-hero .tagline-med,
+.tagline-hero .tagline-short {
+  white-space: nowrap;
+}
+
+/* Default / Mobile < 640px: Short */
+.tagline-hero .tagline-full { display: none; }
+.tagline-hero .tagline-med { display: none; }
+.tagline-hero .tagline-short { display: inline; }
+
+/* Tablet / Desktop < 1280px: Medium */
+@media (min-width: 640px) and (max-width: 1279px) {
+  .tagline-hero .tagline-short { display: none; }
+  .tagline-hero .tagline-med { display: inline; }
+  .tagline-hero .tagline-full { display: none; }
+}
+
+/* Wide Desktop >= 1280px: Full */
+@media (min-width: 1280px) {
+  .tagline-hero .tagline-short { display: none; }
+  .tagline-hero .tagline-med { display: none; }
+  .tagline-hero .tagline-full { display: inline; }
+}

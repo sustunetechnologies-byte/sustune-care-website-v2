@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Logo } from '@/components/ui/Logo'
-import { SITE, HUBS, waLink } from '@/lib/config'
+import { SITE, HUBS } from '@/lib/config'
 
 const col = (title: string, items: [string, string][]) => (
   <div>
@@ -17,12 +17,11 @@ export function Footer() {
       <div className="mx-auto grid max-w-page gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
         <div>
           <Logo light />
-          <p className="mt-4 max-w-sm text-sm leading-relaxed">Property stewardship and parental care for non-resident Indians in {HUBS.join(', ')}.</p>
+          <p className="mt-4 max-w-sm text-sm leading-relaxed">Property stewardship and parental care for Global Indians in {HUBS.join(', ')}.</p>
           <address className="mt-4 space-y-1 text-sm not-italic">
             <p><a href={`tel:${SITE.phoneTel}`} className="hover:text-white">{SITE.phoneDisplay}</a> (India)</p>
-            <p><a href={waLink('Hi Sustune Care')} target="_blank" rel="noreferrer" className="hover:text-white">{SITE.whatsappDisplay}</a> (WhatsApp)</p>
+            <p><a href={`tel:${SITE.phoneUsTel}`} className="hover:text-white">{SITE.phoneUsDisplay}</a> (USA)</p>
             <p><a href={`mailto:${SITE.email}`} className="hover:text-white">{SITE.email}</a></p>
-            <p>{SITE.location}</p>
           </address>
         </div>
         {col('Aegis property', [['Tenant scouting', '/aegis#modules'], ['Rental management', '/aegis#modules'], ['Maintenance and interiors', '/aegis#modules'], ['Pricing', '/aegis#pricing'], ['Sample inspection report', '/aegis#report']])}

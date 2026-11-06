@@ -76,7 +76,7 @@ export const COMMITMENTS = [
 // Illustrative content only. Shown behind a visible "sample" badge and hidden by NEXT_PUBLIC_SHOW_SAMPLE_PROOF=false.
 // Stats bar. The sample figures come from the design mockup and are NOT real. Replace them with verified numbers.
 export const STATS_SAMPLE = [
-  ['500+', 'Properties managed'], ['300+', 'Parents under care'], ['4.9/5', 'NRI satisfaction'], ['3 cities', 'Hyderabad · Bengaluru · Delhi NCR'],
+  ['500+', 'Properties managed'], ['300+', 'Parents under care'], ['4.9/5', 'Global Indian satisfaction'], ['3 cities', 'Hyderabad · Bengaluru · Delhi NCR'],
 ] as const
 export const STATS_REAL = [
   ['2 services', 'Aegis and Sparsh'], ['24/7', 'Emergency SOS coordination'], ['1 portal', 'Updates in your time zone'], ['3 cities', 'Hyderabad · Bengaluru · Delhi NCR'],
@@ -84,7 +84,7 @@ export const STATS_REAL = [
 export const SAMPLE_TESTIMONIALS = [
   { quote: 'I can finally focus on my work abroad. I open the portal and see exactly what happened with the flat.', who: 'Sample client', where: 'USA' },
   { quote: 'Their care and attention for my parents is exceptional. I do not have to worry the way I used to.', who: 'Sample client', where: 'UAE' },
-  { quote: 'Professional, reliable and truly compassionate. I would recommend it to other NRI families.', who: 'Sample client', where: 'Germany' },
+  { quote: 'Professional, reliable and truly compassionate. I would recommend it to other Global Indian families.', who: 'Sample client', where: 'Germany' },
   { quote: 'The inspection report showed me a leak before it became a repair bill.', who: 'Sample client', where: 'UK' },
 ]
 
@@ -172,4 +172,18 @@ export const PREVIEW_PARENT = {
 // Aegis sample report (overview, photos, maintenance, documents tabs)
 export const REPORT_OVERVIEW = [
   ['Structural condition', 'Good'], ['Plumbing and electrical', 'Good'], ['Cleanliness', 'Good'], ['Tenant compliance', 'Good'],
+]
+
+// ---- Founders (About page) ----
+export type Founder = {
+  name: string
+  role: string
+  bio: string
+  photo: string | null
+}
+
+export const FOUNDERS: Founder[] = [
+  { name: 'Founder Name', role: 'Designation', bio: '', photo: null },
+  { name: 'Founder Name', role: 'Designation', bio: '', photo: null },
+  { name: 'Founder Name', role: 'Designation', bio: '', photo: null },
 ]

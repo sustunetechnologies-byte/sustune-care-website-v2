@@ -4,7 +4,7 @@
 
 **Protected Care. Sustained Dignity.**
 
-Website and client platform for Sustune Care, a service for non-resident Indians (NRIs) who need their property and their parents looked after in India.
+Website and client platform for Sustune Care, a service for Global Indians who need their property and their parents looked after in India.
 
 - **Aegis**: property stewardship (tenant scouting, rental management, maintenance and interiors, global sourcing)
 - **Sparsh**: parental care (24/7 SOS, doctor escorts, daily errands, companionship)
@@ -61,7 +61,7 @@ npm run dev                        # http://localhost:3000
 
 | Route | Purpose |
 |---|---|
-| `/` | Hero, stats bar, NRI reality, two pillars, peace-of-mind calculator, testimonials |
+| `/` | Hero, stats bar, Global Indian reality, two pillars, peace-of-mind calculator, testimonials |
 | `/aegis` | Plans and pricing table, sample inspection report, why Aegis |
 | `/sparsh` | Care-plan builder, four pillars, story video |
 | `/portal-preview` | Interactive client dashboard demo with sidebar views (sample data) |

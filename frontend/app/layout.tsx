@@ -9,9 +9,9 @@ import { SITE } from '@/lib/config'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: { default: 'Sustune Care | Property and parental care for NRIs in India', template: '%s | Sustune Care' },
+  title: { default: 'Sustune Care | Property and parental care for Global Indians in India', template: '%s | Sustune Care' },
   description: 'Care for your property. Care for your parents. Peace of mind for you. Aegis property stewardship and Sparsh parental care in Hyderabad, Bengaluru and Delhi NCR.',
-  keywords: ['NRI property management India', 'elder care for NRIs', 'parental care India', 'Sustune Care', 'Aegis', 'Sparsh'],
+  keywords: ['Global Indian property management India', 'elder care for Global Indians', 'parental care India', 'Sustune Care', 'Aegis', 'Sparsh'],
   openGraph: { type: 'website', siteName: 'Sustune Care', locale: 'en_IN', title: 'Sustune Care | Protected Care. Sustained Dignity.' },
   twitter: { card: 'summary_large_image' },
 }

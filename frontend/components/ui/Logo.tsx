@@ -17,9 +17,14 @@ export function Logo({ light, className }: { size?: number; light?: boolean; cla
           className="h-11 w-auto sm:h-12 lg:h-[50px] object-contain drop-shadow-md transition-transform group-hover:scale-105"
         />
       </div>
-      <span className={cn('font-display text-[21px] sm:text-[23px] lg:text-[25px] font-bold tracking-wider leading-none', light ? 'text-white' : 'text-sc-marine')}>
-        SUSTUNE CARE
-      </span>
+      <div className="flex flex-col items-start justify-center">
+        <span className={cn('font-display text-[21px] sm:text-[23px] lg:text-[25px] font-bold tracking-wider leading-none', light ? 'text-white' : 'text-sc-marine')}>
+          SUSTUNE CARE
+        </span>
+        <span className={cn('text-[17px] max-[768px]:text-[14px] font-medium tracking-[0.06em] mt-1 leading-none', light ? 'text-sc-gold' : 'text-sc-bronze')}>
+          For Global Indians
+        </span>
+      </div>
     </Link>
   )
 }

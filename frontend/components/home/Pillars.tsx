@@ -10,14 +10,18 @@ const DATA = {
   aegis: {
     Icon: Home,
     name: 'Aegis',
-    sub: 'Institutional Property Stewardship',
+    tagline: {
+      full: 'Institutional Asset Guardianship for Global Indians',
+      medium: 'Institutional Asset Guardianship',
+      short: 'Asset Guardianship',
+    },
     blurb:
       'Professional management for your most valuable assets, so you can stay focused on what matters, no matter where you are.',
     pts: [
-      'Tenant Scouting & Verification',
+      'Property Management',
       'Rental Management',
-      'Maintenance & Turnkey Interiors',
-      'Global Sourcing & Reporting',
+      'Interiors & Renovation',
+      'Turnkey Construction',
     ],
     href: '/aegis',
     cta: 'More About Aegis',
@@ -27,14 +31,18 @@ const DATA = {
   sparsh: {
     Icon: Users,
     name: 'Sparsh',
-    sub: 'Family & Elder Care',
+    tagline: {
+      full: 'Extended Family Care for Global Indians',
+      medium: 'Extended Family Care',
+      short: 'Family Care',
+    },
     blurb:
       'A trusted presence for your loved ones back home with professional support, regular care and complete peace of mind.',
     pts: [
-      '24/7 Emergency SOS',
-      'Doctor Escort & Appointments',
-      'Daily Errands & Daily Living Support',
-      'Regular Companionship Visits',
+      'Doctor & Medical Care',
+      '24/7 Emergency & Hospital Support',
+      'Everyday Chores & Home Help',
+      'Companionship & Emotional Wellbeing',
     ],
     href: '/sparsh',
     cta: 'More About Sparsh',
@@ -75,7 +83,7 @@ export function Pillars() {
             <article
               key={k}
               className={cn(
-                'group relative flex flex-col justify-between overflow-hidden rounded-[1.8rem] p-6 sm:p-7 lg:p-7.5 text-white shadow-xl transition-all duration-300 min-h-[420px] sm:min-h-[430px] lg:min-h-[440px]',
+                'group relative flex flex-col justify-between overflow-hidden rounded-[1.8rem] p-6 sm:p-7 lg:p-7.5 text-white shadow-xl transition-all duration-300 min-h-[420px] sm:min-h-[430px] lg:min-h-[440px] [container-type:inline-size]',
                 c.bg,
                 c.border
               )}
@@ -111,12 +119,16 @@ export function Pillars() {
                   <span className="flex h-12 w-12 sm:h-13 sm:w-13 items-center justify-center rounded-full border border-sc-gold/75 text-sc-gold shrink-0">
                     <c.Icon aria-hidden className="h-5.5 w-5.5 sm:h-6 sm:w-6" />
                   </span>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <h3 className="font-display font-serif text-2xl sm:text-[1.95rem] lg:text-[2.05rem] font-bold tracking-tight text-white leading-tight">
                       {c.name}
                     </h3>
                     <p className="font-serif text-xs sm:text-[14px] lg:text-[14.5px] font-medium text-white/90 leading-tight mt-0.5">
-                      {c.sub}
+                      <span className="tagline-card">
+                        <span className="tagline-full">{c.tagline.full}</span>
+                        <span className="tagline-med">{c.tagline.medium}</span>
+                        <span className="tagline-short">{c.tagline.short}</span>
+                      </span>
                     </p>
                   </div>
                 </div>
@@ -128,9 +140,9 @@ export function Pillars() {
                 {/* Capability Highlights */}
                 <ul className="mt-4 sm:mt-4.5 space-y-2 sm:space-y-2.5 text-xs sm:text-[13.5px] lg:text-[14px] max-w-[88%] sm:max-w-[72%] lg:max-w-[62%]">
                   {c.pts.map((p) => (
-                    <li key={p} className="flex items-center gap-2.5">
-                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sc-gold text-sc-marine">
-                        <ArrowRight aria-hidden className="h-2.5 w-2.5 stroke-[2.5]" />
+                    <li key={p} className="flex items-start gap-2.5">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#F5B82E] via-[#D98A08] to-[#9E5D02] text-sc-marine shadow-[0_0_10px_rgba(217,138,8,0.45)] border border-[#FFE28A]/60 mt-0.5">
+                        <ArrowRight aria-hidden className="h-2.5 w-2.5 stroke-[2.8]" />
                       </span>
                       <span className="text-white font-medium leading-snug">{p}</span>
                     </li>
@@ -142,8 +154,9 @@ export function Pillars() {
               <div className="relative z-10 mt-6 pt-1">
                 <Button
                   href={c.href}
+                  variant="metallic-gold"
                   arrow
-                  className="h-10.5 px-5.5 text-xs sm:text-[13.5px] font-semibold bg-sc-gold hover:bg-sc-goldhover text-sc-marine rounded-lg shadow-md inline-flex items-center"
+                  className="group h-11 px-5.5 text-xs sm:text-[13.5px] font-bold rounded-lg inline-flex items-center transition-all duration-300 transform hover:-translate-y-0.5"
                 >
                   {c.cta}
                 </Button>
@@ -183,7 +196,7 @@ export function Pillars() {
               <Globe2 className="h-5.5 w-5.5 text-sc-bronze" />
             </span>
             <div>
-              <h4 className="font-display text-sm sm:text-[15px] font-bold text-sc-marine">Aligned to NRI Time Zones</h4>
+              <h4 className="font-display text-sm sm:text-[15px] font-bold text-sc-marine">Aligned to Global Indian Time Zones</h4>
               <p className="mt-0.5 text-xs sm:text-[12.5px] text-slate-600 leading-snug">
                 Proactive WhatsApp updates and evening review calls scheduled across US, UK, Middle East &amp; Australia.
               </p>

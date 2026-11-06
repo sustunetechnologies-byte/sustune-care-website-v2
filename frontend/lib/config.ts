@@ -6,6 +6,8 @@ export const SITE = {
   tagline: 'Care for your property, care for your parents, care for your peace of mind.',
   phoneDisplay: '+91 89856 34239',
   phoneTel: '+918985634239',
+  phoneUsDisplay: '+1 206 713 6114',
+  phoneUsTel: '+12067136114',
   whatsappDisplay: '+1 206 713 6114',
   whatsappNumber: '12067136114', // digits only, used by wa.me
   email: 'contact@sustunecare.com',

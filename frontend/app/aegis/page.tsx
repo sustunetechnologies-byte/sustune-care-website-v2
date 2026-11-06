@@ -1,14 +1,25 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { ClipboardList, Globe2, Home, Wrench, Check, Play } from 'lucide-react'
+import {
+  ClipboardList,
+  Globe2,
+  Home,
+  Wrench,
+  Check,
+  Play,
+  Building,
+  KeyRound,
+  PaintRoller,
+  HardHat,
+} from 'lucide-react'
+import { Button } from '@/components/ui/Button'
 import { CtaBand } from '@/components/ui/CtaBand'
 import { VideoPlayer } from '@/components/ui/VideoPlayer'
-import { AEGIS_MODULES } from '@/lib/content'
 import { AEGIS_VIDEO } from '@/lib/config'
 
 export const metadata: Metadata = {
   title: 'Aegis property stewardship',
-  description: 'Tenant scouting, rental management, maintenance and interiors for NRI-owned property in Hyderabad, Bengaluru and Delhi NCR.',
+  description: 'Tenant scouting, rental management, maintenance and interiors for Global Indian-owned property in Hyderabad, Bengaluru and Delhi NCR.',
 }
 
 const HERO_ICONS = [
@@ -16,6 +27,61 @@ const HERO_ICONS = [
   [ClipboardList, 'Active Rental Management'],
   [Wrench, 'Maintenance & Turnkey Interiors'],
   [Globe2, 'Global Sourcing & Reporting'],
+] as const
+
+const AEGIS_PILLARS = [
+  {
+    title: 'Property Management',
+    icon: Building,
+    tagline: 'Uncompromising physical stewardship to protect, maintain, and preserve your asset.',
+    points: [
+      'Scheduled Physical Walkthroughs & Audits',
+      'Vacant Property & Encroachment Watch',
+      'Preventive Upkeep & Supervised Repairs',
+      'Statutory Taxes & Municipal Utilities Administration',
+      'Digital Document Vault & Financial Reporting',
+    ],
+    cta: 'Schedule an On-Site Audit',
+  },
+  {
+    title: 'Rental Management',
+    icon: KeyRound,
+    tagline: 'Maximized rental yields and vetted tenancies with zero cross-border friction.',
+    points: [
+      'Tenant Sourcing & Asset Marketing',
+      'Multi-Tier Due Diligence & Background Checks',
+      'Protective Lease Drafting & Sub-Registrar Formalities',
+      'Rent Escrow, Collection & Local Follow-Ups',
+      'Dispute Remediation, Move-Out Snagging & Evictions',
+    ],
+    cta: 'List Your Property for Rent',
+  },
+  {
+    title: 'Interiors & Renovation',
+    icon: PaintRoller,
+    tagline: 'Bespoke living spaces and structural modernisations delivered with complete material transparency.',
+    points: [
+      'Space Planning & Concept Interior Design',
+      'End-to-End Home Renovation & Wet-Area Remediation',
+      'Independent Material & Hardware Auditing',
+      'Milestone-Based Visual Progress Walkthroughs',
+      'Snagging, Deep Cleaning & White-Glove Handover',
+    ],
+    cta: 'Request a Renovation Consultation',
+  },
+  {
+    title: 'Turnkey Construction',
+    icon: HardHat,
+    tagline: 'Precision civil engineering and milestone-driven execution from blueprint to handover.',
+    points: [
+      'Architectural Schematics & Municipal Sanctions',
+      'Turnkey Civil Construction Execution',
+      'Civil Engineering Site Supervision & Quality Audits',
+      'BOQ Scrubbing & Procurement at Actuals',
+      'Drone Progress Mapping & Staged Escrow Releases',
+    ],
+    cta: 'Discuss Your Construction Project',
+  },
 ] as const
 
 export default function AegisPage() {
@@ -44,9 +110,13 @@ export default function AegisPage() {
                 Aegis
               </span>
 
-              {/* Heading: White, clamp sized */}
-              <h1 className="mt-3 font-display text-[clamp(2.2rem,3.8vw,3.2rem)] font-bold leading-[1.12] text-white tracking-tight">
-                Institutional Property Stewardship
+              {/* Heading: White, responsive tagline */}
+              <h1 className="mt-3 font-display font-bold leading-[1.12] text-white tracking-tight">
+                <span className="tagline-hero">
+                  <span className="tagline-full text-[clamp(1.5rem,2.4vw,2.5rem)]">Institutional Asset Guardianship for Global Indians</span>
+                  <span className="tagline-med text-[clamp(1.7rem,3vw,2.7rem)]">Institutional Asset Guardianship</span>
+                  <span className="tagline-short text-[clamp(1.6rem,5vw,2.2rem)]">Asset Guardianship</span>
+                </span>
               </h1>
 
               {/* Subtext: Light text, increased size */}
@@ -94,9 +164,9 @@ export default function AegisPage() {
       {/* 2. FOUR MODULES SECTION: Top-Stacked Content, Sized to Content, Centered in Viewport */}
       <section
         id="modules"
-        className="relative overflow-hidden bg-gradient-to-b from-[#0B1B3F] to-[#10285A] scroll-mt-[84px] snap-start flex flex-col justify-center min-h-[calc(100svh-84px)] [@media(max-height:700px)]:min-h-0 [@media(max-height:700px)]:h-auto py-[clamp(24px,4vh,44px)]"
+        className="relative overflow-hidden bg-gradient-to-b from-[#0B1B3F] to-[#10285A] scroll-mt-[84px] snap-start flex flex-col justify-center min-h-[calc(100svh-84px)] [@media(max-height:700px)]:min-h-0 [@media(max-height:700px)]:h-auto py-[clamp(20px,3.5vh,44px)]"
       >
-        <div className="relative z-10 mx-auto max-w-page w-full px-5 sm:px-8">
+        <div className="relative z-10 mx-auto max-w-[1520px] w-full px-5 sm:px-8">
           {/* Heading Block: sits directly above the cards, ~10px between heading & subtext, clamp(16px, 2.5vh, 28px) to cards */}
           <div className="mb-[clamp(16px,2.5vh,28px)] max-w-3xl">
             <h2 className="font-display text-[clamp(2rem,4.6vh,2.8rem)] font-bold leading-tight text-white">
@@ -110,45 +180,57 @@ export default function AegisPage() {
             </p>
           </div>
 
-          {/* 2-Column Grid: normal block cards, gap clamp(14px, 2vh, 22px), top-aligned content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[clamp(14px,2vh,22px)] items-stretch">
-            {AEGIS_MODULES.map((m) => (
+          {/* 4 Cards Grid: 4 in 1 row on desktop >= 1280px, 2x2 on tablet 768-1279px, 1 column below 768px */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[clamp(14px,1.4vw,24px)] items-stretch">
+            {AEGIS_PILLARS.map((m) => (
               <div
                 key={m.title}
-                className="rounded-2xl border border-white/20 bg-white py-[clamp(16px,2.6vh,28px)] px-[clamp(20px,2vw,30px)] text-sc-slate shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="rounded-2xl border border-white/20 bg-white py-[clamp(14px,2.2vh,24px)] px-[clamp(16px,1.4vw,24px)] text-sc-slate shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex flex-col"
               >
                 {/* 1. Icon + Title on one line */}
                 <div className="flex items-center gap-2.5 sm:gap-3">
                   <m.icon
                     aria-hidden
-                    className="h-7 w-7 shrink-0 text-sc-cerulean"
+                    className="h-6 w-6 sm:h-7 sm:w-7 shrink-0 text-sc-cerulean"
                     strokeWidth={1.75}
                   />
-                  <h3 className="font-display text-[clamp(1.25rem,2.9vh,1.6rem)] font-bold text-sc-marine leading-snug">
+                  <h3 className="font-display text-[clamp(1.1rem,2.6vh,1.4rem)] font-bold text-sc-marine leading-snug">
                     {m.title}
                   </h3>
                 </div>
 
-                {/* 2. Description (no empty space below title) */}
-                <p className="mt-2 text-[clamp(0.95rem,2vh,1.1rem)] text-slate-600 leading-snug">
-                  {m.lead}
+                {/* 2. Tagline directly under title */}
+                <p className="mt-2 text-[clamp(0.9rem,1.9vh,1.02rem)] text-slate-600 leading-snug">
+                  {m.tagline}
                 </p>
 
-                {/* 3. Checklist (~12px gap from description, ~6-8px gap between items) */}
+                {/* 3. Checklist directly under tagline */}
                 <ul className="mt-3 space-y-2">
                   {m.points.map((p) => (
                     <li
                       key={p}
-                      className="flex items-start gap-2 text-[clamp(0.92rem,2vh,1.08rem)] leading-[1.35] text-sc-slate"
+                      className="flex items-start gap-2 text-[clamp(0.86rem,1.85vh,1rem)] leading-[1.32] text-sc-slate"
                     >
                       <Check
                         aria-hidden
-                        className="mt-0.5 h-4 w-4 shrink-0 text-sc-emerald"
+                        className="mt-[2px] h-4 w-4 shrink-0 text-sc-emerald"
                       />
                       <span>{p}</span>
                     </li>
                   ))}
                 </ul>
+
+                {/* 4. Full-width Gold CTA Button pinned to bottom */}
+                <div className="mt-auto pt-4 sm:pt-5">
+                  <Button
+                    href={`/contact?interest=aegis&topic=${encodeURIComponent(m.title)}`}
+                    variant="primary"
+                    arrow
+                    className="w-full h-[44px] sm:h-[46px] text-xs sm:text-[13px] font-bold rounded-lg shadow-sm"
+                  >
+                    {m.cta}
+                  </Button>
+                </div>
               </div>
             ))}
           </div>

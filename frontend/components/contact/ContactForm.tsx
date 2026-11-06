@@ -53,7 +53,7 @@ export function ContactForm() {
       </div>
       <div className="mt-5 grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="country">NRI location <span aria-hidden className="text-red-600">*</span></label>
+          <label htmlFor="country">Global Indian location <span aria-hidden className="text-red-600">*</span></label>
           <select id="country" required className={input} value={f.country} onChange={(e) => set('country', e.target.value)}><option value="" disabled>Select your country</option>{RESIDENCE.map((c) => <option key={c}>{c}</option>)}</select>
           <label htmlFor="city" className="mt-5 block">Property or parents are in</label>
           <select id="city" className={input} value={f.city} onChange={(e) => set('city', e.target.value)}>{HUBS.map((c) => <option key={c}>{c}</option>)}</select>

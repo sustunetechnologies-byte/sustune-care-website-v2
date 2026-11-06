@@ -2,10 +2,10 @@ import { cn } from '@/lib/cn'
 
 const tones = { white: 'bg-sc-canvas', mist: 'bg-sc-mist', navy: 'bg-sc-marine text-white' } as const
 
-export function Section({ id, tone = 'white', className, children }: { id?: string; tone?: keyof typeof tones; className?: string; children: React.ReactNode }) {
+export function Section({ id, tone = 'white', className, containerClassName, children }: { id?: string; tone?: keyof typeof tones; className?: string; containerClassName?: string; children: React.ReactNode }) {
   return (
     <section id={id} className={cn('scroll-mt-24 py-14 sm:py-20', tones[tone], className)}>
-      <div className="mx-auto max-w-page px-5 sm:px-8">{children}</div>
+      <div className={cn('mx-auto max-w-page px-5 sm:px-8', containerClassName)}>{children}</div>
     </section>
   )
 }
